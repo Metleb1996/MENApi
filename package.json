@@ -1,0 +1,22 @@
+{
+  "name": "MENApi",
+  "version": "1.0.0",
+  "description": "Node.js Express ve MongoDB ile RESTFUL API",
+  "main": "index.js",
+  "repository": "https:github.com/Metleb1996/MENApi.git",
+  "author": "Metleb RUSTEMOV",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
