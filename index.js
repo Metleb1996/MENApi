@@ -1,5 +1,7 @@
 const express = require('express');
 const productsRouter = require("./routes/products");
+const authRouter = require("./routes/auth");
+const verifyToken = require("./middleware/verifyToken");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -21,7 +23,8 @@ mongoose.connect(
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use("/products", productsRouter);
+app.use("/auth", authRouter);
+app.use("/products", verifyToken, productsRouter);
 
 app.get("/", (req, res) => {
     res.send("⭐ Hi, welcome to Products RESTFUL API ⭐");
